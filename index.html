@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Business Name | Premium Plumbing Services</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0c1220;
+  --bg-soft:#111a2b;
+  --nav:#0d1626cc;
+  --accent:#1e90ff;
+  --gold:#d4af37;
+  --text:#ffffff;
+  --muted:#9fb3c8;
+  --card:rgba(255,255,255,0.04);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:linear-gradient(180deg,#0c1220,#0f1b30);
+  color:var(--text);
+  line-height:1.6;
+}
+
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+section{
+  padding:100px 0;
+}
+
+h1,h2,h3{
+  font-weight:800;
+  letter-spacing:-1px;
+}
+
+p{
+  color:var(--muted);
+}
+
+.btn{
+  display:inline-block;
+  padding:16px 32px;
+  border-radius:50px;
+  font-weight:600;
+  text-decoration:none;
+  transition:all .3s ease;
+  cursor:pointer;
+}
+
+.btn-primary{
+  background:linear-gradient(135deg,var(--accent),#00c6ff);
+  color:white;
+  box-shadow:0 10px 30px rgba(30,144,255,.4);
+}
+
+.btn-primary:hover{
+  transform:translateY(-3px);
+  box-shadow:0 15px 40px rgba(30,144,255,.6);
+}
+
+.btn-outline{
+  border:2px solid var(--accent);
+  color:var(--accent);
+}
+
+.btn-outline:hover{
+  background:var(--accent);
+  color:#fff;
+}
+
+/* NAV */
+nav{
+  position:fixed;
+  width:100%;
+  top:0;
+  backdrop-filter:blur(10px);
+  background:var(--nav);
+  padding:20px 0;
+  z-index:1000;
+}
+
+.nav-container{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-weight:800;
+  font-size:1.3rem;
+}
+
+.nav-links{
+  display:flex;
+  gap:30px;
+  align-items:center;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:var(--muted);
+  font-weight:500;
+}
+
+.nav-links a:hover{
+  color:white;
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  background:radial-gradient(circle at 20% 20%,rgba(30,144,255,.2),transparent 60%);
+}
+
+.hero h1{
+  font-size:3rem;
+  max-width:800px;
+  margin-bottom:20px;
+}
+
+.hero p{
+  max-width:650px;
+  margin-bottom:30px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  gap:30px;
+}
+
+.services-grid,
+.why-grid,
+.testimonials-grid,
+.process-grid{
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+}
+
+.card{
+  background:var(--card);
+  padding:40px 30px;
+  border-radius:20px;
+  border:1px solid rgba(255,255,255,.05);
+  backdrop-filter:blur(15px);
+  transition:.4s ease;
+  box-shadow:0 20px 50px rgba(0,0,0,.5);
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  border-color:rgba(30,144,255,.6);
+}
+
+.icon{
+  font-size:28px;
+  margin-bottom:20px;
+  color:var(--accent);
+}
+
+/* TESTIMONIAL */
+.stars{
+  color:var(--gold);
+  margin-bottom:15px;
+}
+
+/* CTA */
+.cta{
+  background:linear-gradient(135deg,#111a2b,#0c1220);
+  text-align:center;
+  border-top:1px solid rgba(255,255,255,.05);
+  border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+/* FOOTER */
+footer{
+  padding:60px 0;
+  background:#0a111d;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:40px;
+}
+
+footer h4{
+  margin-bottom:15px;
+}
+
+footer a{
+  color:var(--muted);
+  text-decoration:none;
+  display:block;
+  margin-bottom:10px;
+}
+
+footer a:hover{
+  color:white;
+}
+
+/* FADE */
+.fade{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 1s ease;
+}
+
+.fade.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+@media(max-width:768px){
+  .hero h1{
+    font-size:2.2rem;
+  }
+  .nav-links{
+    display:none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="container nav-container">
+    <div class="logo">Your Business Name</div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="tel:0000000000">(000) 000-0000</a>
+      <a href="#contact" class="btn btn-primary">Book Service</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container fade">
+    <h1>Premium Plumbing Solutions Built to Impress</h1>
+    <p>Premium plumbing solutions designed to elevate your home or business in Your City, State. This high-end demonstration website will be fully customized with your branding, phone number, images and service areas after purchase.</p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn btn-primary">Book Service Now</a>
+      <a href="tel:0000000000" class="btn btn-outline">Call (000) 000-0000</a>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <h2 class="fade">Professional Plumbing Services</h2>
+    <div class="grid services-grid">
+      <div class="card fade"><div class="icon">⚡</div><h3>Emergency Repairs</h3><p>Rapid-response emergency plumbing services available when urgent issues arise.</p></div>
+      <div class="card fade"><div class="icon">💧</div><h3>Leak Detection</h3><p>Advanced technology to locate and resolve hidden leaks before costly damage occurs.</p></div>
+      <div class="card fade"><div class="icon">🔥</div><h3>Water Heater Installation</h3><p>Expert installation of efficient water heating systems built for performance.</p></div>
+      <div class="card fade"><div class="icon">🚿</div><h3>Drain Cleaning</h3><p>Thorough drain cleaning solutions to restore flow and prevent recurring blockages.</p></div>
+      <div class="card fade"><div class="icon">🔧</div><h3>Pipe Replacement</h3><p>Durable pipe upgrades designed to protect your property long-term.</p></div>
+      <div class="card fade"><div class="icon">🏢</div><h3>Commercial Plumbing</h3><p>Scalable plumbing solutions tailored for businesses and commercial properties.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="container">
+    <h2 class="fade">Why Homeowners & Businesses Choose Us</h2>
+    <div class="grid why-grid">
+      <div class="card fade"><h3>Licensed & Insured</h3><p>Fully credentialed professionals delivering dependable service.</p></div>
+      <div class="card fade"><h3>24/7 Emergency Response</h3><p>Immediate support available whenever plumbing issues strike.</p></div>
+      <div class="card fade"><h3>Upfront Transparent Pricing</h3><p>Clear, honest estimates before work begins — no hidden surprises.</p></div>
+      <div class="card fade"><h3>Highly Rated Professionals</h3><p>Skilled technicians trusted for consistent, high-quality workmanship.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="container">
+    <h2 class="fade">Client Experiences</h2>
+    <div class="grid testimonials-grid">
+      <div class="card fade">
+        <div class="stars">★★★★★</div>
+        <p>Outstanding service from start to finish. Professional, punctual, and extremely thorough.</p>
+      </div>
+      <div class="card fade">
+        <div class="stars">★★★★★</div>
+        <p>The level of professionalism and communication was exceptional. Highly recommended.</p>
+      </div>
+      <div class="card fade">
+        <div class="stars">★★★★★</div>
+        <p>Fast response time and transparent pricing. The quality of work exceeded expectations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2 class="fade">Our Simple 3-Step Process</h2>
+    <div class="grid process-grid">
+      <div class="card fade"><h3>1. Schedule</h3><p>Contact us online or by phone to book your service appointment.</p></div>
+      <div class="card fade"><h3>2. Inspect & Quote</h3><p>We assess the issue and provide a clear, upfront estimate.</p></div>
+      <div class="card fade"><h3>3. Resolve</h3><p>Our team completes the work efficiently with guaranteed quality.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="container fade">
+    <h2>Ready to Elevate Your Plumbing Experience?</h2>
+    <p>This premium demo will be fully customized with your branding, phone number, and service areas in Your City, State.</p>
+    <br>
+    <a href="tel:0000000000" class="btn btn-primary">Call (000) 000-0000 Now</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <h4>Your Business Name</h4>
+      <p>Premium plumbing services in Your City, State.</p>
+      <p>Phone: (000) 000-0000</p>
+      <p>Email: info@yourbusiness.com</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#contact">Book Service</a>
+    </div>
+    <div>
+      <h4>Connect</h4>
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Google Business</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const faders=document.querySelectorAll('.fade');
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+},{threshold:0.2});
+faders.forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
